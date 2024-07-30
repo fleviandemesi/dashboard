@@ -1,9 +1,14 @@
 import React from 'react'
 import "./mybooking.css"
+import Layout from '../layout/Layout'
+
 const MyBooking = () => {
   return (
     <div>
-      <h2>My Bookings</h2>
+      <Layout/>
+      <section className="container">
+        <h1>Mybooking</h1>
+      </section>
     </div>
   )
 }

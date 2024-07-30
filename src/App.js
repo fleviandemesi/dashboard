@@ -11,12 +11,14 @@ import SignIn from './components/signin/SignIn';
 import SignUp from './components/signup/SignUp';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopBar from './components/topbar/TopBar';
+import SideBar from './components/sidebar/SideBar';
+
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <TopBar/>
+     
       <Routes>
       <Route index  element={<MainContent />} />
       <Route path="/signin" element={<SignIn />} />

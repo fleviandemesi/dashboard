@@ -1,11 +1,16 @@
 import React from 'react'
 import "./addnurse.css"
+import Layout from '../layout/Layout'
+
 
 const AddNurse = () => {
   return (
     <div>
-      <h2>Add Nurse</h2>
-    </div>
+    <Layout/>
+    <section className="container">
+      <h1>Add Nurse</h1>
+    </section>
+  </div>
   )
 }
 

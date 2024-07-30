@@ -1,11 +1,16 @@
 import React from 'react'
 import "./addtests.css"
+import Layout from '../layout/Layout'
+
 
 const AddTests = () => {
   return (
     <div>
-      <h2>Add Tests</h2>
-    </div>
+    <Layout/>
+    <section className="container">
+      <h1>Add Tests</h1>
+    </section>
+  </div>
   )
 }
 

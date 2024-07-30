@@ -1,9 +1,14 @@
 import React from 'react'
 import "./nurse.css"
+import Layout from '../layout/Layout'
+
 const Nurse = () => {
   return (
     <div>
-      <h2>Nurse</h2>
+      <Layout/>
+      <section className="container">
+        <h1>Nurse</h1>
+      </section>
     </div>
   )
 }

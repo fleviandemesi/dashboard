@@ -1,10 +1,14 @@
 import React from 'react'
-import "./layuot.css"
+
+
+import SideBar from '../sidebar/SideBar'
+import TopBar from '../topbar/TopBar'
 
 const Layout = () => {
   return (
     <div>
-      <h2>Layout</h2>
+     <SideBar/>
+     <TopBar/>
     </div>
   )
 }
