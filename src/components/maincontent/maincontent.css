@@ -1,5 +1,6 @@
-.container{
-    width: 75%;
+.containerr{
+    width: 60%;
+    align-items: center;
     margin-left: 26%;
     background-color: rgb(243, 243, 243);
     display: flex;

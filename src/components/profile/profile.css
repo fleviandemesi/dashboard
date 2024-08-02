@@ -1,0 +1,74 @@
+/* profile.css */
+
+/* Styling for the profile container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgb(32, 129, 173);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Profile header styling */
+  .profile-header {
+    display: flex;
+    align-items: start;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the profile image */
+  .profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  /* Styling for profile info */
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  .profile-info .id,
+  .profile-info .permit,
+  .profile-info .tel,
+  .profile-info .reg {
+    color: #0e1cd6;
+    font-weight: bold;
+  }
+  
+  .profile-info .reg {
+    font-style: italic;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .profile-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .profile-info p {
+      font-size: 1em;
+    }
+  }
+ 
+  

@@ -6,9 +6,12 @@ import { CgProfile } from "react-icons/cg";
 import "./topbar.css"
 
 const TopBar = () => {
+  // get lab name from local storage 
+  const labname = localStorage.getItem("lab_name")
   return (
     <nav className='topbar'>
         {/* left side  */}
+
         <div className="topbar-admin">
             Admin Portal
         </div>
@@ -16,7 +19,7 @@ const TopBar = () => {
         <div className="topbar-content">
             <div className="topbar-date">
             <AiFillCalendar />
-        <span>User : Fle</span>
+        <span>User : { labname }</span>
             </div>
             
             <div className="topbar-icon">
