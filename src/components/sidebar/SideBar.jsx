@@ -11,9 +11,14 @@ import { CiLight } from "react-icons/ci";
 import { RiDashboardHorizontalLine } from "react-icons/ri";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { LiaUserNurseSolid } from "react-icons/lia";
+import ReactLogout from '../../helpers/Logout';
+
 import "./sidebar.css"
+import CheckSession from '../../helpers/CheckSession';
 
 const SideBar = () => {
+  const {lab_name,lab_id,access_token} = CheckSession()
+  const {logout} = ReactLogout()
   return <section className='sidebar'>
     {/* links */}
     <div className="sidebar-top">
@@ -60,7 +65,7 @@ const SideBar = () => {
       </div>
       {/* logout division  */}
       <div className="p-4 sidebar-logout">
-      <button className="btn btn-dark btn-sm">
+      <button className="btn btn-dark btn-sm" onClick={logout}>
       <RiLogoutCircleLine />LogOut
 
       </button>

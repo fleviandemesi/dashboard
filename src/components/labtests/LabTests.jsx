@@ -28,7 +28,7 @@ const LabTests = () => {
   console.log(labtests)
 
   return (
-    <div className="lab-tests-container">
+    <div className="lab-tests-cont">
       <Layout />
       <div>
         <h2>Lab Tests Information</h2>

@@ -1,14 +1,14 @@
 /* labtests.css */
 
-.lab-tests-container {
-    margin: 50px;
-    margin-left: 200px;
+.lab-tests-cont {
+    
+    
     font-family: Arial, sans-serif;
     
   }
   
   table {
-    width: 100%;
+    width: 75%;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff; /* White background for the table */
