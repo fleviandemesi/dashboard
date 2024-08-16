@@ -3,6 +3,7 @@ import "./addnurse.css";
 import Layout from '../layout/Layout';
 import CheckSession from '../../helpers/CheckSession';
 import axiosinstanceToken from '../../helpers/axiosinstanceToken';
+import "../../index.css"
 
 const AddNurse = () => {
   const {lab_name,lab_id,access_token} = CheckSession()
@@ -50,7 +51,7 @@ const AddNurse = () => {
   return (
     <div>
       <Layout />
-      <section className="container">
+      <section className="container" >
         {/* return response for success  */}
       {success && <div className='success'>{success}</div>}
       {/* return response for failure  */}

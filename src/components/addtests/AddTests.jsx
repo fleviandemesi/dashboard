@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
 import "./addtests.css";
 import Layout from '../layout/Layout';
 import CheckSession from '../../helpers/CheckSession';
 import axiosinstanceToken from '../../helpers/axiosinstanceToken';
+import "../../index.css"
 
 const AddTests = () => {
   const {lab_name,lab_id,access_token} = CheckSession()
@@ -51,7 +51,7 @@ const AddTests = () => {
     
     <div>
       <Layout/>
-      <section className="add-tests-section">
+      <section className="add-tests-section container">
         {/* return response for success  */}
       {success && <div className='success'>{success}</div>}
       {/* return response for failure  */}

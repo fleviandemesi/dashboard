@@ -27,16 +27,16 @@ const SignIn = () => {
        // console.log(response)
        setLoading(false)
       //  handle the response 
-      if(response?.data && response?.data?.access_token && response?.data?.member){
+      if(response?.data && response?.data?.access_token && response?.data?.message){
         // alert("Login Successful")
         // save data to local storage 
-        localStorage.setItem("lab_id",response?.data?.member?.lab_id)
-        localStorage.setItem("lab_name",response?.data?.member?.lab_name)
-        localStorage.setItem("email",response?.data?.member?.email)
-        localStorage.setItem("permit_id",response?.data?.member?.permit_id)
-        localStorage.setItem("phone",response?.data?.member?.phone)
+        localStorage.setItem("lab_id",response?.data?.message?.lab_id)
+        localStorage.setItem("lab_name",response?.data?.message?.lab_name)
+        localStorage.setItem("email",response?.data?.message?.email)
+        localStorage.setItem("permit_id",response?.data?.message?.permit_id)
+        localStorage.setItem("phone",response?.data?.message?.phone)
         localStorage.setItem("access_token",response?.data?.access_token)
-        localStorage.setItem("reg_date",response?.data?.member?.reg_date)
+        localStorage.setItem("reg_date",response?.data?.message?.reg_date)
 
 
 // redirect user to home page 
