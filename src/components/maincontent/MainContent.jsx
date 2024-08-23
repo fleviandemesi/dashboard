@@ -6,7 +6,7 @@ import CheckSession from '../../helpers/CheckSession'
 
 const MainContent = () => {
   // check if user is logged in using check session 
-  const {lab_name,lab_id,access_token} = CheckSession()
+  const {username,admin_id,access_token} = CheckSession()
  
   return (
     <div>

@@ -8,9 +8,9 @@ import "./topbar.css"
 import CheckSession from '../../helpers/CheckSession';
 
 const TopBar = () => {
-  const {lab_name,lab_id,access_token} = CheckSession()
-  // get lab name from local storage 
-  const labname = localStorage.getItem("lab_name")
+  const {username,admin_id,access_token} = CheckSession()
+
+  
   return (
     <nav className='topbar'>
         {/* left side  */}
@@ -22,7 +22,7 @@ const TopBar = () => {
         <div className="topbar-content">
             <div className="topbar-date">
             <AiFillCalendar />
-        <span>User : { labname }</span>
+        <span>User : { username }</span>
             </div>
             
             <div className="topbar-icon">

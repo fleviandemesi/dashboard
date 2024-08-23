@@ -3,9 +3,9 @@ import axiosInstance from '../../helpers/axiosInstance'
 import './signup.css';
 
 const SignUp = () => {
-  const [name,setName] = useState("");
-    const [permit,setPermit] = useState("");
-    const [email,setEmail] = useState("");
+ 
+  const [email,setEmail] = useState("");;
+  const [username,setusername] = useState("");
     const [phone,setPhone] = useState("");
     const[password,setPassword] = useState("");
     //add states to see whether its loading its succes or failure
@@ -19,16 +19,16 @@ const SignUp = () => {
       e. preventDefault()
       setLoading(true)
       // use axiosInstance to post data to api 
-      axiosInstance.post('/labsignup',{
-        lab_name: name,
-        permit_id:permit,
+      axiosInstance.post('/adminsignup',{
+        
+        username:username,
         email:email,
         phone,phone,
         password:password
       })
         .then((response)=>{
           setSuccess(response?.data?.message) 
-          // console.log(response)
+          console.log(response?.data)
           setLoading(false)
         })
         .catch((error)=>{
@@ -51,28 +51,9 @@ const SignUp = () => {
       {failure && <div className='failure'>{failure}</div>}
       <h1>Sign Up</h1>
       <form onSubmit={handleSignUp}>
-        <div className='form-group'>
-          <label htmlFor='name'>Enter Lab Name</label>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            onChange={(e)=> setName(e.target.value)}
-            value={name}
-            required
-          />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='name'>Enter Permit Id</label>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            onChange={(e)=> setPermit(e.target.value)}
-            value={permit}
-            required
-          />
-        </div>
+        
+        
+        
         <div className='form-group'>
           <label htmlFor='email'>Enter Email</label>
           <input
@@ -85,11 +66,22 @@ const SignUp = () => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='name'>Enter Phone</label>
+          <label htmlFor='username'>Enter username</label>
           <input
             type='text'
             id='name'
             name='name'
+            onChange={(e)=> setusername(e.target.value)}
+            value={username}
+            required
+          />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='phone'>Enter Phone</label>
+          <input
+            type='phone'
+            id='phone'
+            name='phone'
             onChange={(e)=> setPhone(e.target.value)}
             value={phone}
             required
@@ -109,8 +101,7 @@ const SignUp = () => {
         <button type='submit'>Sign Up</button>
         
       </form>
-      {/* {name} <br />
-      {permit} <br />
+      {/* {username} <br />
       {email} <br />
       {phone} <br />
       {password} <br /> */}

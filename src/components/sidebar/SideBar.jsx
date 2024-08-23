@@ -17,14 +17,15 @@ import "./sidebar.css"
 import CheckSession from '../../helpers/CheckSession';
 
 const SideBar = () => {
-  const {lab_name,lab_id,access_token} = CheckSession()
+  const {username,admin_id,access_token} = CheckSession()
+
   const {logout} = ReactLogout()
   return <section className='sidebar'>
     {/* links */}
     <div className="sidebar-top">
      <div className="sidebar-brand">
      <CiBank />
-     <span>MEDILAB</span>
+     <span>SNEAKERAPP</span>
 
      </div>
      {/* sidebar links  */}
@@ -37,39 +38,32 @@ const SideBar = () => {
             <Link to="/profile"><CgProfile/> My Profile</Link>
           </li>
           <li>
-            <Link to="/addtests">< CiCirclePlus/> Add Tests</Link>
+            <Link to="/addshoe">< MdAddToPhotos/> Add Shoe</Link>
           </li>
           <li>
-            <Link to="/labtests"><MdOutlineLibraryAddCheck/> Lab Tests</Link>
+            <Link to="/categories"><MdOutlineLibraryAddCheck/> Categories</Link>
           </li>
           <li>
-            <Link to="/mybooking"><IoMdAddCircleOutline/> My Bookings</Link>
+            <Link to="/order"><IoMdAddCircleOutline/> Orders</Link>
           </li>
           <li>
-            <Link to="/addnurse"><MdAddToPhotos/> Add Nurse</Link>
+            <Link to="/shoes"><CiCirclePlus/> Shoe</Link>
           </li>
           <li>
-            <Link to="/viewnurse"><LiaUserNurseSolid /> Nurses</Link>
+            <Link to="/category"><CiCirclePlus/> Add Category</Link>
           </li>
+          
 </ul>
 
      </div>
     </div>
         {/* go pro division */}
-    <div className='sidebar-bottom'>
-    <RiDashboardHorizontalLine />
-      <span>GREATE UI. <button>Go Pro</button></span>
-      
-      <br />
-      <span><strong>Upgrade Now</strong></span>
-      </div>
-      {/* logout division  */}
-      <div className="p-4 sidebar-logout">
-      <button className="btn btn-dark btn-sm" onClick={logout}>
+    
+      <button className="logout" onClick={logout}>
       <RiLogoutCircleLine />LogOut
 
       </button>
-      </div>
+      
   </section>
     
   

@@ -4,7 +4,7 @@ import axiosInstance from '../../helpers/axiosInstance'
 import { useNavigate, Link } from 'react-router-dom';
 
 const SignIn = () => {
-  const [email,setEmail] = useState("")
+  const [username,setusername] = useState("")
   const[password,setpassword] = useState("")
  //add states to see whether its loading its succes or failure
  const [loading, setLoading] = useState(false);
@@ -18,8 +18,8 @@ const SignIn = () => {
    e. preventDefault()
    setLoading(true)
    // use axiosInstance to post data to api 
-   axiosInstance.post('/labsignin',{
-     email:email,
+   axiosInstance.post('/adminsignin',{
+     username:username,
      password:password
    })
      .then((response)=>{
@@ -30,13 +30,12 @@ const SignIn = () => {
       if(response?.data && response?.data?.access_token && response?.data?.message){
         // alert("Login Successful")
         // save data to local storage 
-        localStorage.setItem("lab_id",response?.data?.message?.lab_id)
-        localStorage.setItem("lab_name",response?.data?.message?.lab_name)
+        localStorage.setItem("admin_id",response?.data?.message?.admin_id)
         localStorage.setItem("email",response?.data?.message?.email)
-        localStorage.setItem("permit_id",response?.data?.message?.permit_id)
+        localStorage.setItem("username",response?.data?.message?.username)
         localStorage.setItem("phone",response?.data?.message?.phone)
         localStorage.setItem("access_token",response?.data?.access_token)
-        localStorage.setItem("reg_date",response?.data?.message?.reg_date)
+       
 
 
 // redirect user to home page 
@@ -67,18 +66,19 @@ const SignIn = () => {
        {success && <div className='success'>{success}</div>}
       {/* return response for failure  */}
       {failure && <div className='failure'>{failure}</div>}
-      <h2>Login Lab</h2>
+      <h2 style={{color:"white"}}>Login </h2>
 
       <form onSubmit={handleSignIn}>
         
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="username">Username:</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={(e)=> setEmail(e.target.value)}
-            value={email}
+            type="text"
+            id="name"
+           
+            name="name"
+            onChange={(e)=> setusername(e.target.value)}
+            value={username}
             required
           />
         </div>
@@ -96,7 +96,7 @@ const SignIn = () => {
         <button type="submit" className="signin-button">Login Account</button>
       </form><br />
       {/* Link to Create Account page */}
-      <p>Don't have an account? <a href="/signup">Create Account</a></p>
+      <p style={{color:"white"}}>Don't have an account? <a href="/signup">Create Account</a></p>
       
       {/* {email} <br />
       {password} <br /> */}

@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: rgb(32, 129, 173);
+    background-color: #17193a;;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -89,6 +89,8 @@ width: 100%;
     margin-top: 5px;
 }
 /* logout  */
-.sidebar-logout{
+.logout{
+    background-color: red;
+    margin: 30px;
     
 }

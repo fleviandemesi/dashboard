@@ -7,22 +7,22 @@ const CheckSession = ()=>{
     // check from local storage if the following variables are available 
      
      
-  const lab_name = localStorage.getItem("lab_name")
-  const lab_id = localStorage.getItem("lab_id")
+  const admin_id = localStorage.getItem("admin_id")
+  const username = localStorage.getItem("username")
   const access_token = localStorage.getItem("access_token")
 //   if they are not CgPresentation, redirect user to signin 
 useEffect(()=>{
     // check if they are empty 
-    if(!lab_name && !lab_id && ! access_token){
+    if(!admin_id && !username && ! access_token){
         // clear the local stroge 
         localStorage.clear()
         return navigate("/signin")//go to signin
 
     }
 
-},[lab_name,lab_id,access_token,navigate])
+},[admin_id,username,access_token,navigate])
 // return your variables 
-return{lab_name,lab_id,access_token}
+return{admin_id,username,access_token}
 
 
 }
